@@ -23,11 +23,11 @@
     },
     "go.buildTags": "integration,sandbox",
     "redhat.telemetry.enabled": false,
-    "window.zoomLevel": 1, //kind of a hack really. could be configured properly
+    "window.zoomLevel": 1, // kind of a hack really. could be configured properly
     "files.autoSave": "onFocusChange",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.lineNumbers": "relative",
-    // style points
+    // style points :P
     "editor.minimap.enabled": false, // removes minimap
     "editor.renderWhitespace": "none", // removes whitespace chars
     "editor.renderIndentGuides": false, // removes indent guides
