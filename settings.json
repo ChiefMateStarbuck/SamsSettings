@@ -30,7 +30,7 @@
     "vim.useSystemClipboard": true,
 
     // style points
-    "window.zoomLevel": 1, //kind of a hack really. could be configured properly
+    "window.zoomLevel": 2, //a hack really. could be configured properly
     "files.autoSave": "onFocusChange",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.lineNumbers": "relative",
