@@ -4,29 +4,45 @@ call plug#begin()
 	Plug 'tpope/vim-sensible'
 	Plug 'junegunn/seoul256.vim'
 	Plug 'yggdroot/indentline'
-	"Plug 'valloric/youcompleteme'
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	Plug 'rust-lang/rust.vim'
+	Plug 'projekt0n/github-nvim-theme'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}	
 call plug#end()
 
 " Personal configuration
 :set rnu
 :set nu!
 :set showcmd 
-let g:seoul256_background = 256
-colo seoul256-light
+colo github_light
+set termguicolors
 :autocmd InsertEnter,InsertLeave * set cul!
 :set nowrapscan
 :set ic
 :set hlsearch
-:hi Search ctermbg=LightYellow
 :hi Search ctermfg=Red
 nnoremap <F10> :set nu!<return>
 nnoremap <C-Y> :tabprevious<CR>
 nnoremap <C-O> :tabnext<CR>
 
-" YouCompleteMe config
-"let g:ycm_clangd_binary_path='clangd'
+
+"COC extensions + setup
+" GoTo code navigation.
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-python', 'coc-rust-analyzer']
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
 
 " Nerd Tree configuration
  " autocmd vimenter * NERDTree
@@ -41,3 +57,4 @@ nnoremap <C-O> :tabnext<CR>
  let g:NERDTreeWinSize=40
 " f12 toggle nerd tree
  nnoremap <silent> <expr> <F12> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
+
