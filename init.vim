@@ -43,6 +43,11 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Nerd Tree configuration
  " autocmd vimenter * NERDTree
