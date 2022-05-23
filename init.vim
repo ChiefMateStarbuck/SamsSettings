@@ -21,6 +21,7 @@ set termguicolors
 :set nowrapscan
 :set ic
 :set hlsearch
+map <esc> :noh <CR>
 :hi Search ctermfg=Red
 nnoremap <F10> :set nu!<return>
 nnoremap <C-Y> :tabprevious<CR>
