@@ -30,7 +30,8 @@ nnoremap <C-O> :tabnext<CR>
 
 "COC extensions + setup
 " GoTo code navigation.
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-python', 'coc-rust-analyzer']
+set cmdheight=2
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-python', 'coc-rust-analyzer', 'coc-tsserver']
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
