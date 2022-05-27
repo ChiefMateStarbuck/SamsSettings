@@ -24,8 +24,8 @@ set termguicolors
 map <esc> :noh <CR>
 :hi Search ctermfg=Red
 nnoremap <F10> :set nu!<return>
-nnoremap <C-Y> :tabprevious<CR>
-nnoremap <C-O> :tabnext<CR>
+nnoremap <C-B> :tabprevious<CR>
+nnoremap <C-N> :tabnext<CR>
 
 
 "COC extensions + setup
@@ -50,6 +50,10 @@ inoremap <silent><expr> <TAB>
       \ CheckBackspace() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " Nerd Tree configuration
  " autocmd vimenter * NERDTree
