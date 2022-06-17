@@ -1,11 +1,25 @@
 {
-    "workbench.colorTheme": "GitHub Light",
+    // THE THEME IS BORING
+    "workbench.colorTheme": "Gray Matter Light",
+    "workbench.colorCustomizations":{
+        "[Gray Matter Light]": {
+            "activityBar.foreground": "#3C3C3C",
+            "editorLineNumber.foreground": "#3C3C3C",
+            "editorWhitespace.foreground": "#3C3C3C",
+            "tab.inactiveForeground": "#3C3C3C",
+            "titleBar.inactiveForeground": "#3C3C3C",
+        },
+    },
+    "editor.tokenColorCustomizations": {
+        "[Gray Matter Light]": {
+            "comments": "#523333"
+        }
+    },
     
     // go stuff
     "go.toolsManagement.autoUpdate": true,
     "go.lintOnSave": "off",
     "gopls": {
-
         "ui.diagnostic.staticcheck": true,
         "ui.diagnostic.diagnosticsDelay": "500ms",
     },
@@ -23,15 +37,18 @@
             "source.organizeImports": true,
         },
     },
-    "go.buildTags": "integration,sandbox",
+    "go.survey.prompt": false,
     "redhat.telemetry.enabled": false,
 
     // vim settings
-    "vim.useSystemClipboard": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.replaceWithRegister": true,
 
-    // style points
-    "window.zoomLevel": 2, //a hack really. could be configured properly
-    "files.autoSave": "onFocusChange",
+    //git stuff
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    
+    //style points
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.lineNumbers": "relative",
     "editor.cursorSurroundingLines": 10, 
@@ -44,12 +61,9 @@
     "editor.occurrencesHighlight": false, // removes highlights occurrences (still works when you select a word)
     "editor.glyphMargin": false, // removes the space used mainly for debugging indicators
     "explorer.openEditors.visible": 0, // removes the open editors section at the top of the sidebar, you can see the opened files with ⌘ + ⌥ + Tab
-    "workbench.activityBar.visible": false, // removes the activity bar (the 4 icons at the left of the screen), so now you will have to open the explorer, git, debugger and extension with shortcuts or through the Command Palette
+    //"workbench.activityBar.visible": false, // removes the activity bar (the 4 icons at the left of the screen), so now you will have to open the explorer, git, debugger and extension with shortcuts or through the Command Palette
     "workbench.editor.showIcons": false, // removes icon from opened files in tabs
     "workbench.editor.tabCloseButton": "off", // removes the status bar
-    "workbench.colorCustomizations": { // object that allows you to customize your color theme: https://code.visualstudio.com/docs/getstarted/theme-color-reference 
-        "tab.activeBorder": "#0000" // removes border to highlight active tabs (the colors formats are: #RGB, #RGBA, #RRGGBB or #RRGGBBAA)
-    },
     "workbench.editor.enablePreview": false,
-    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
 }
