@@ -1,7 +1,8 @@
 {
-    // THE THEME IS BORING
-    "workbench.colorTheme": "Gray Matter Light",
-    "workbench.colorCustomizations":{
+    //
+    //custom colors. not really used anymore but oh well
+    //
+    "workbench.colorCustomizations": {
         "[Gray Matter Light]": {
             "activityBar.foreground": "#3C3C3C",
             "editorLineNumber.foreground": "#3C3C3C",
@@ -15,8 +16,9 @@
             "comments": "#523333"
         }
     },
-    
+    //
     // go stuff
+    //
     "go.toolsManagement.autoUpdate": true,
     "go.lintOnSave": "off",
     "gopls": {
@@ -39,19 +41,41 @@
     },
     "go.survey.prompt": false,
     "redhat.telemetry.enabled": false,
-
-    // vim settings
+    //
+    // vim stuff
+    //
     "vim.camelCaseMotion.enable": true,
     "vim.replaceWithRegister": true,
-
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    //
     //git stuff
+    //
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    
-    //style points
+    //
+    // style points 
+    //
+    //"window.zoomLevel": 1,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.lineNumbers": "relative",
-    "editor.cursorSurroundingLines": 10, 
+    "editor.cursorSurroundingLines": 10,
     "editor.minimap.enabled": false, // removes minimap
     "editor.renderWhitespace": "none", // removes whitespace chars
     "editor.renderLineHighlight": "none", // removes line highlight
@@ -66,4 +90,7 @@
     "workbench.editor.tabCloseButton": "off", // removes the status bar
     "workbench.editor.enablePreview": false,
     "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Night Owl Light",
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
 }
