@@ -1,6 +1,6 @@
 {
     //
-    //custom colors. not really used anymore but oh well
+    //custom colors. not really used anymore but oh well.
     //
     "workbench.colorCustomizations": {
         "[Gray Matter Light]": {
@@ -40,7 +40,12 @@
         },
     },
     "go.survey.prompt": false,
-    "redhat.telemetry.enabled": false,
+    "redhat.telemetry.enabled": false, // really don't remember what this is 
+    //
+    // python stuff
+    //
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
     //
     // vim stuff
     //
@@ -69,13 +74,9 @@
     //
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    //
-    // style points 
-    //
-    //"window.zoomLevel": 1,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.lineNumbers": "relative",
-    "editor.cursorSurroundingLines": 10,
+    //"editor.cursorSurroundingLines": 5,
     "editor.minimap.enabled": false, // removes minimap
     "editor.renderWhitespace": "none", // removes whitespace chars
     "editor.renderLineHighlight": "none", // removes line highlight
@@ -90,7 +91,9 @@
     "workbench.editor.tabCloseButton": "off", // removes the status bar
     "workbench.editor.enablePreview": false,
     "explorer.confirmDelete": false,
-    "workbench.colorTheme": "Night Owl Light",
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
+    "workbench.colorTheme": "GitHub Light",
+    "workbench.sideBar.location": "right",
+    "[python]": {},
+    "window.zoomLevel": 1,
+    "editor.inlineSuggest.enabled": true,
 }

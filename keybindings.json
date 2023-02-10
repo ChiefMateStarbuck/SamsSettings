@@ -1,6 +1,5 @@
-// Place your key bindings in this file to override the defaults
 [
-    //Nav like vim
+    // Vim like Nav. Vim is holy. All hail Vim. 
     {
         "key": "ctrl+alt+h",
         "command": "workbench.action.navigateLeft"
@@ -17,7 +16,6 @@
         "key": "ctrl+alt+j",
         "command": "workbench.action.navigateDown"
     },
-    // Navigate buffers
     {
         "key": "ctrl+h",
         "command": "workbench.action.previousEditor"
@@ -25,5 +23,69 @@
     {
         "key": "ctrl+l",
         "command": "workbench.action.nextEditor"
-    }
+    },
+    {
+        "key": "ctrl+cmd+l",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+cmd+h",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    // Open files like an actual human and not a robot.
+    // These settings make more sense with VSCode/Vim. All hail Vim.
+    {
+        "key": "ctrl+enter",
+        "command": "explorer.openAndPassFocus"
+    },
+    {
+        "key": "ctrl+cmd+enter",
+        "command": "explorer.openToSide"
+    },
+    // Terminal normal people settings.
+    {
+        "key": "alt+t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    // P stands for POWER 
+    {
+        "key": "ctrl+cmd+p",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
 ]
